@@ -1,0 +1,10 @@
+# Inner join example
+mysql> SELECT
+        CONCAT(m.lastname, ', ', m.firstname) AS 'Manager',
+        CONCAT(e.lastname, ', ', e.firstname) AS 'Direct report'
+        FROM
+       employees e
+             INNER JOIN
+         employees m ON m.employeeNumber = e.reportsto
+       ORDER BY manager;
+#
